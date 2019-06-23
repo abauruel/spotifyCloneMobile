@@ -1,14 +1,17 @@
-import '~/config/ReactotronConfig';
+import "~/config/ReactotronConfig";
+import "~/config/StatusBarConfig";
 
-import React from 'react';
-import { Provider } from 'react-redux';
-import { View } from 'react-native';
+import React from "react";
+import { Provider } from "react-redux";
+import { View } from "react-native";
 
-import store from './store';
+import Routes from "./routes";
+
+import store from "./store";
 
 const App = () => (
   <Provider store={store}>
-    <View />
+    <Routes />
   </Provider>
 );
 
