@@ -9,9 +9,12 @@ import Routes from "./routes";
 
 import store from "./store";
 
+import Player from "./components/Player";
+
 const App = () => (
   <Provider store={store}>
     <Routes />
+    <Player />
   </Provider>
 );
 

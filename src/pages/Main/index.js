@@ -25,7 +25,7 @@ class Main extends Component {
   handlePodcastPress = podcast => {
     const { navigation } = this.props;
 
-    navigation.navigate("Podcasts", podcast);
+    navigation.navigate("Podcasts", { podcast });
   };
 
   render() {
