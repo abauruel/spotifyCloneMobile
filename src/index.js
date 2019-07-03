@@ -3,7 +3,9 @@ import "~/config/StatusBarConfig";
 
 import React from "react";
 import { Provider } from "react-redux";
-import { View } from "react-native";
+import { View, Text } from "react-native";
+
+import TrackPlayer from "react-native-track-player";
 
 import Routes from "./routes";
 
