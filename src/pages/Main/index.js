@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import { View } from "react-native";
-
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import PodcastsActions from "../../store/ducks/podcasts";
@@ -14,7 +12,7 @@ import {
   Cover,
   Info,
   Title,
-  Count
+  Count,
 } from "./styles";
 
 class Main extends Component {
@@ -22,7 +20,7 @@ class Main extends Component {
     const { loadRequest } = this.props;
     loadRequest();
   }
-  handlePodcastPress = podcast => {
+  handlePodcastPress = (podcast) => {
     const { navigation } = this.props;
 
     navigation.navigate("Podcasts", { podcast });
@@ -35,7 +33,7 @@ class Main extends Component {
         <PodcastList
           ListHeaderComponent={() => <PageTitle>Podcasts</PageTitle>}
           data={podcasts.data}
-          keyExtractor={podcast => String(podcast.id)}
+          keyExtractor={(podcast) => String(podcast.id)}
           renderItem={({ item: podcast }) => (
             <Podcast onPress={() => this.handlePodcastPress(podcast)}>
               <Cover source={{ uri: podcast.cover }} />
@@ -50,13 +48,10 @@ class Main extends Component {
     );
   }
 }
-const mapStateToProps = state => ({
-  podcasts: state.podcasts
+const mapStateToProps = (state) => ({
+  podcasts: state.podcasts,
 });
 
-const mapDispatchToProps = dispatch =>
+const mapDispatchToProps = (dispatch) =>
   bindActionCreators(PodcastsActions, dispatch);
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

@@ -2,7 +2,7 @@
   "podcasts": [
     {
       "id": 1,
-      "title": "RocketCast",
+      "title": "MusicCast",
       "cover": "https://s3-sa-east-1.amazonaws.com/gonative/cover1.png",
       "tracks": [
         {
