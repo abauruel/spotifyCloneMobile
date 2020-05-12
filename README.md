@@ -6,7 +6,7 @@
 
 <h1 align="center">Podcast Player</h1>
 <p align="center">
-This application based on interface podcast applying concept adquired on bootcamp, applying technologies as Redux and Sagas</p>
+This application is based on interface Spotify podcast applying the concepts acquired, using libs as Redux to share state between components and Sagax to side effects</p>
 
 
 <p align="center">
@@ -20,6 +20,9 @@ This application based on interface podcast applying concept adquired on bootcam
   </a>
  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
+<p align="center">
+  <img src="./.github/SpotfyClone.gif" height="350" width="185" />
+  </p>
 
 ##
 
